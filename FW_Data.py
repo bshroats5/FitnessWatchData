@@ -7,3 +7,10 @@ import plotly.express as px
 data = pd.read_csv("Apple-Fitness-Data.csv")
 print(data.head())
 print(data.isnull().sum())
+
+
+# Step Count Over Time
+fig1 = px.line(data, x="Time",
+y="Step Count",
+title="Step Count Over Time")
+fig1.show()
